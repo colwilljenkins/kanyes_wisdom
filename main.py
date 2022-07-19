@@ -2,6 +2,7 @@ from tkinter import *
 import requests
 
 
+# Button command
 def get_quote():
     response = requests.get(url='https://api.kanye.rest/')
     data = response.json()
@@ -9,6 +10,7 @@ def get_quote():
     canvas.itemconfig(quote_text, text=f'{new_quote}')
 
 
+# Tkinter window
 window = Tk()
 window.title("Kanye Says...")
 window.config(padx=50, pady=50)
